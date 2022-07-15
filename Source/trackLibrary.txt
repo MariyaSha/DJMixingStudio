@@ -1,0 +1,7 @@
+Track1,,0.0,0.000000
+electro_smash.mp3,file:///C%3A/Users/goaim/Documents/BSC/OOP/uol_oop_tracks/tracks/electro_smash.mp3,3012873,134.111979
+Track3,,0.0,0.000000
+aon_inspired.mp3,file:///C%3A/Users/goaim/Documents/BSC/OOP/uol_oop_tracks/tracks/aon_inspired.mp3,2060832,94.040000
+c_major_theme.mp3,file:///C%3A/Users/goaim/Documents/BSC/OOP/uol_oop_tracks/tracks/c_major_theme.mp3,2715744,106.800000
+bleep_10.mp3,file:///C%3A/Users/goaim/Documents/BSC/OOP/uol_oop_tracks/tracks/bleep_10.mp3,425904,18.144000
+Track7,,0.0,0.000000

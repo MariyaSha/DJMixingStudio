@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="H9P4O3" name="DJMixingStudio" projectType="guiapp" useAppConfig="0"
+              displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="gE4a0H" name="DJMixingStudio">
+    <GROUP id="{448C4A49-5508-FE2B-E1AB-F07BE2FF7DDD}" name="Source">
+      <FILE id="dCjTUX" name="ColourChangeButton.cpp" compile="1" resource="0"
+            file="Source/ColourChangeButton.cpp"/>
+      <FILE id="rw22ED" name="ColourChangeButton.h" compile="0" resource="0"
+            file="Source/ColourChangeButton.h"/>
+      <FILE id="jxfzVF" name="DemoUtilities.h" compile="0" resource="0" file="Source/DemoUtilities.h"/>
+      <FILE id="LZ329p" name="AudioLiveScrollingDisplay.h" compile="0" resource="0"
+            file="Source/AudioLiveScrollingDisplay.h"/>
+      <FILE id="YgMolh" name="WaveformDisplay.cpp" compile="1" resource="0"
+            file="Source/WaveformDisplay.cpp" xcodeResource="0"/>
+      <FILE id="VzjdVa" name="PlaylistComponent.cpp" compile="1" resource="0"
+            file="Source/PlaylistComponent.cpp"/>
+      <FILE id="dO26fq" name="PlaylistComponent.h" compile="0" resource="0"
+            file="Source/PlaylistComponent.h"/>
+      <FILE id="l5yzUU" name="WaveformDisplay.h" compile="0" resource="0"
+            file="Source/WaveformDisplay.h"/>
+      <FILE id="MEf2cV" name="DeckGUI.cpp" compile="1" resource="0" file="Source/DeckGUI.cpp"/>
+      <FILE id="L0TasX" name="DeckGUI.h" compile="0" resource="0" file="Source/DeckGUI.h"/>
+      <FILE id="bkGiFL" name="DJAudioPlayer.cpp" compile="1" resource="0"
+            file="Source/DJAudioPlayer.cpp"/>
+      <FILE id="QrvePa" name="DJAudioPlayer.h" compile="0" resource="0" file="Source/DJAudioPlayer.h"/>
+      <FILE id="M98yce" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
+      <FILE id="pX3CVt" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
+      <FILE id="NYotBW" name="MainComponent.cpp" compile="1" resource="0"
+            file="Source/MainComponent.cpp"/>
+      <FILE id="RqE9SL" name="MusicLibrary.h" compile="0" resource="0" file="Source/MusicLibrary.h"/>
+      <FILE id="uf2kgn" name="logo.png" compile="0" resource="0" file="../logo.png"/>
+      <FILE id="nEfZMD" name="MusicLibrary.cpp" compile="1" resource="0"
+            file="Source/MusicLibrary.cpp"/>
+      <FILE id="y7gvyo" name="AudioRecorder.cpp" compile="1" resource="0"
+            file="Source/AudioRecorder.cpp"/>
+      <FILE id="TYymSP" name="RecordingThumbnail.cpp" compile="1" resource="0"
+            file="Source/RecordingThumbnail.cpp"/>
+      <FILE id="PGYW63" name="RecordingThumbnail.h" compile="0" resource="0"
+            file="Source/RecordingThumbnail.h"/>
+      <FILE id="s1XGMb" name="AudioRecorder.h" compile="0" resource="0" file="Source/AudioRecorder.h"/>
+      <FILE id="zlFHNR" name="RecordingComponent.cpp" compile="1" resource="0"
+            file="Source/RecordingComponent.cpp"/>
+      <FILE id="t3AgQU" name="RecordingComponent.h" compile="0" resource="0"
+            file="Source/RecordingComponent.h"/>
+      <FILE id="kX17Ff" name="trackLibrary.txt" compile="0" resource="1"
+            file="Source/trackLibrary.txt"/>
+      <FILE id="urJ475" name="selectedTrack.txt" compile="0" resource="1"
+            file="Source/selectedTrack.txt"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="Builds/VisualStudio2022" extraDefs="JUCE_MODAL_LOOPS_PERMITTED = 1">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="NewProject"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="NewProject"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../Desktop/juce-6.1.5-windows/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+    <VS2019 targetFolder="Builds/VisualStudio2019" extraDefs="JUCE_MODAL_LOOPS_PERMITTED = 1">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_devices" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_formats" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_utils" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_core" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_data_structures" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_events" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_graphics" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_basics" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+        <MODULEPATH id="juce_gui_extra" path="C:\Users\goaim\Desktop\JUCE\modules"/>
+      </MODULEPATHS>
+    </VS2019>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
