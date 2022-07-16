@@ -10,6 +10,7 @@ This app was created with strict Object Oriented Programming principles and earn
 <br>
 Please feel free to use any code snippet, function or class from this project to advance your programming skills.
 <br>
+<br>
 
 ![DJ Mixing App Screenshot](https://user-images.githubusercontent.com/32107652/179364464-457ee343-7e2b-4496-b154-49ddf6778a66.png)
 
