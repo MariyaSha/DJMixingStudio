@@ -21,7 +21,7 @@ WaveformDisplay::WaveformDisplay(
     fileLoaded(false),
     position(0)
 {
-    waveColour = Colour::fromString("#2bc8c5");
+    waveColour = c_teal;
     
     audioThumb.addChangeListener(this);
 }
@@ -39,13 +39,13 @@ void WaveformDisplay::paint (juce::Graphics& g)
     g.drawRect (getLocalBounds(), 1);
 
     // set background colour
-    g.setColour(Colour::fromString("#2c2a4b"));
+    g.setColour(c_mediumnavy);
     g.fillRect(getLocalBounds());
 
     if (fileLoaded){
         
         //draw playhead
-        g.setColour(Colour::fromString("#1d1b36"));
+        g.setColour(c_darkernavy);
         g.fillRect(position * getWidth(), 0, getWidth() / 20, getHeight());
 
         // draw waveform with the user selected colour
@@ -63,7 +63,7 @@ void WaveformDisplay::paint (juce::Graphics& g)
     }
     else {
         // no file is detected yet
-        g.setColour(Colour::fromString("#E5E5E5"));
+        g.setColour(c_cream);
         g.setFont(16.0f);
         g.drawText("file not yet loaded...", getLocalBounds(),
             juce::Justification::centred, true);

@@ -26,8 +26,8 @@ RecordingThumbnail::~RecordingThumbnail()
 void RecordingThumbnail::paint (juce::Graphics& g)
 {
     // set background and overlay colours
-    g.fillAll(Colour::fromString("#2c2a4b"));
-    g.setColour(Colour::fromString("#2bc8c5"));
+    g.fillAll(c_mediumnavy);
+    g.setColour(c_teal);
 
     if (thumbnail.getTotalLength() > 0.0)
     {
@@ -41,7 +41,7 @@ void RecordingThumbnail::paint (juce::Graphics& g)
     else
     {
         // no recording detected
-        g.setColour(Colour::fromString("#ffffff"));
+        g.setColour(c_white);
         g.setFont(14.0f);
         g.drawFittedText("(No file recorded)", getLocalBounds(), Justification::centred, 2);
     }

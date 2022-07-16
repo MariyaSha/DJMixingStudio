@@ -30,12 +30,12 @@ PlaylistComponent::PlaylistComponent(DJAudioPlayer* _player,
 
     tableComponent.setModel(this);
 
-    tableComponent.setColour(ListBox::backgroundColourId, Colour::fromString("#2bc8c5"));
+    tableComponent.setColour(ListBox::backgroundColourId, c_teal);
 
     addAndMakeVisible(tableComponent);
     addAndMakeVisible(searchbox);
     searchbox.addListener(this);
-    searchbox.setColour(TextEditor::backgroundColourId, Colour::fromString("#2c2a4b"));
+    searchbox.setColour(TextEditor::backgroundColourId, c_mediumnavy);
     searchbox.setColour(TextEditor::textColourId, juce::Colours::lightgrey);
     searchbox.setTextToShowWhenEmpty(CharPointer_UTF8("search in playlist"), juce::Colours::lightgrey);
 
@@ -51,7 +51,7 @@ PlaylistComponent::~PlaylistComponent()
 
 void PlaylistComponent::paint (juce::Graphics& g)
 {
-    g.setColour (juce::Colours::white);
+    g.setColour (c_white);
     g.setFont (14.0f);
 }
 
@@ -75,25 +75,25 @@ void PlaylistComponent::paintRowBackground(Graphics & g,
     if (rowIsSelected)
     {
         // track selected by user
-        g.fillAll(Colour::fromString("#febc27"));
+        g.fillAll(c_sunflower);
         musicL.updateSelectionFile(musicL.trackPath[rowNumber]);
     }
     else if (rowNumber == searchRow && keyword.length() == 0)
     {
         // search keyword cleared
-        g.fillAll(Colour::fromString("#000000"));
-        g.setColour(juce::Colours::white);
+        g.fillAll(c_black);
+        g.setColour(c_white);
     }
     else if (rowNumber == searchRow && keyword.length() > 0)
     {
         // at least one search keyword char was entered by user
         // and at least one track is a match
-        g.fillAll(Colour::fromString("#4E37B0"));
+        g.fillAll(c_vividnavy);
     }
     else {
         // no search keyword chars detected
-        g.fillAll(Colour::fromString("#000000"));
-        g.setColour(juce::Colours::white);
+        g.fillAll(c_black);
+        g.setColour(c_white);
     }
 
     // draw playlist information fetched from MusicL
@@ -176,8 +176,8 @@ Component* PlaylistComponent::refreshComponentForCell(int rowNumber,
             String id{std::to_string(rowNumber)};
             btn->setComponentID(id);
             btn->addListener(this);
-            btn->setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
-            btn->setColour(ComboBox::outlineColourId, Colour::fromString("#000000"));
+            btn->setColour(TextButton::buttonColourId, c_lightnavy);
+            btn->setColour(ComboBox::outlineColourId, c_black);
             existingComponentToUpdate = btn;
         }
     }
@@ -191,8 +191,8 @@ Component* PlaylistComponent::refreshComponentForCell(int rowNumber,
             String id{ "a" + std::to_string(rowNumber)};
             btn2->setComponentID(id);
             btn2->addListener(this);
-            btn2->setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
-            btn2->setColour(ComboBox::outlineColourId, Colour::fromString("#000000"));
+            btn2->setColour(TextButton::buttonColourId, c_lightnavy);
+            btn2->setColour(ComboBox::outlineColourId, c_black);
             existingComponentToUpdate = btn2;
         }
     }
@@ -205,8 +205,8 @@ Component* PlaylistComponent::refreshComponentForCell(int rowNumber,
             String id{ std::to_string(rowNumber) };
             btn4->setComponentID(id);
             btn4->addListener(this);
-            btn4->setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
-            btn4->setColour(ComboBox::outlineColourId, Colour::fromString("#000000"));
+            btn4->setColour(TextButton::buttonColourId, c_lightnavy);
+            btn4->setColour(ComboBox::outlineColourId, c_black);
             existingComponentToUpdate = btn4;
         }
     }
@@ -252,13 +252,13 @@ void PlaylistComponent::buttonClicked(Button* btn)
     }
     else if (btn->getButtonText() == "stop")
     {
-        btn->setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
+        btn->setColour(TextButton::buttonColourId, c_lightnavy);
         btn->setButtonText("play");
         player->stop();
     }
     else if (btn->getButtonText() == "play") {
         int id = std::stoi(btn->getComponentID().toStdString());
-        btn->setColour(TextButton::buttonColourId, Colour::fromString("#febc27"));
+        btn->setColour(TextButton::buttonColourId, c_sunflower);
         btn->setButtonText("stop");
         player->stop();
         player->loadURL(musicL.trackPath[id]);

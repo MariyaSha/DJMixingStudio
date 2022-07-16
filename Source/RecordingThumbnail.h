@@ -30,6 +30,11 @@ public:
     void resized() override;
 
 private:
+    // colours
+    juce::Colour c_mediumnavy = juce::Colour(44, 42, 75);
+    juce::Colour c_teal = juce::Colour(43, 200, 197);
+    juce::Colour c_white = juce::Colour(255, 255, 255);
+
     AudioFormatManager formatManager;
     AudioThumbnailCache thumbnailCache{ 10 };
     AudioThumbnail thumbnail{ 512, formatManager, thumbnailCache };

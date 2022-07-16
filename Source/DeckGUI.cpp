@@ -23,20 +23,20 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
     is_mute = false;
     // PLAY BUTTON STYLING
     addAndMakeVisible(playButton);
-    playButton.setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
-    playButton.setColour(TextButton::textColourOffId, juce::Colours::white);
-    playButton.setColour(ComboBox::outlineColourId, juce::Colours::white);
+    playButton.setColour(TextButton::buttonColourId, c_darknavy);
+    playButton.setColour(TextButton::textColourOffId, c_white);
+    playButton.setColour(ComboBox::outlineColourId, c_white);
     playButton.addListener(this);
 
     // SET COLOUR BUTTON STYLING
     addAndMakeVisible(colourChangeButton);
-    colourChangeButton.setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
-    colourChangeButton.setColour(TextButton::textColourOffId, juce::Colours::white);
+    colourChangeButton.setColour(TextButton::buttonColourId, c_darknavy);
+    colourChangeButton.setColour(TextButton::textColourOffId, c_white);
     addAndMakeVisible(muteButton);
     colourChangeButton.addListener(this);
 
     // UPDATE COLOUR BUTTON STYLING
-    muteButton.setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
+    muteButton.setColour(TextButton::buttonColourId, c_darknavy);
     muteButton.setColour(TextButton::textColourOffId, juce::Colours::white);
     muteButton.addListener(this);
 
@@ -45,9 +45,9 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
     volSlider.addListener(this);
     volSlider.setSliderStyle(Slider::Rotary);
     volSlider.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
-    volSlider.setColour(Slider::rotarySliderFillColourId, Colour::fromString("#febc27"));
-    volSlider.setColour(Slider::rotarySliderOutlineColourId, Colour::fromString("#2c2a4b"));
-    volSlider.setColour(Slider::thumbColourId, Colour::fromString("#2bc8c5"));
+    volSlider.setColour(Slider::rotarySliderFillColourId, c_sunflower);
+    volSlider.setColour(Slider::rotarySliderOutlineColourId, c_mediumnavy);
+    volSlider.setColour(Slider::thumbColourId, c_teal);
     volSlider.setRange(0.0, 1.0);
     volSlider.setPopupDisplayEnabled(false, true, this);
 
@@ -56,9 +56,9 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
     speedSlider.addListener(this);
     speedSlider.setSliderStyle(Slider::Rotary);
     speedSlider.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
-    speedSlider.setColour(Slider::rotarySliderFillColourId, Colour::fromString("#febc27"));
-    speedSlider.setColour(Slider::rotarySliderOutlineColourId, Colour::fromString("#2c2a4b"));
-    speedSlider.setColour(Slider::thumbColourId, Colour::fromString("#2bc8c5"));
+    speedSlider.setColour(Slider::rotarySliderFillColourId, c_sunflower);
+    speedSlider.setColour(Slider::rotarySliderOutlineColourId, c_mediumnavy);
+    speedSlider.setColour(Slider::thumbColourId, c_teal);
     speedSlider.setRange(0.0, 5.0);
     speedSlider.setPopupDisplayEnabled(false, true, this);
 
@@ -67,9 +67,9 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
     posSlider.addListener(this);
     posSlider.setSliderStyle(Slider::Rotary);
     posSlider.setTextBoxStyle(Slider::NoTextBox, false, 0, 0);
-    posSlider.setColour(Slider::rotarySliderFillColourId, Colour::fromString("#febc27"));
-    posSlider.setColour(Slider::rotarySliderOutlineColourId, Colour::fromString("#2c2a4b"));
-    posSlider.setColour(Slider::thumbColourId, Colour::fromString("#2bc8c5"));
+    posSlider.setColour(Slider::rotarySliderFillColourId, c_sunflower);
+    posSlider.setColour(Slider::rotarySliderOutlineColourId, c_mediumnavy);
+    posSlider.setColour(Slider::thumbColourId, c_teal);
     posSlider.setRange(0.0, 1.0);
     posSlider.setPopupDisplayEnabled(false, true, this);
 
@@ -78,14 +78,14 @@ DeckGUI::DeckGUI(DJAudioPlayer* _player,
 
     // LOAD BUTTON STYLING
     addAndMakeVisible(loadButton);
-    loadButton.setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
-    loadButton.setColour(TextButton::textColourOffId, juce::Colours::white);
+    loadButton.setColour(TextButton::buttonColourId, c_darknavy);
+    loadButton.setColour(TextButton::textColourOffId, c_white);
     loadButton.addListener(this);
 
     // LOAD FROM PLAYLIST BUTTON STYLING
     addAndMakeVisible(playlistLoadButton);
-    playlistLoadButton.setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
-    playlistLoadButton.setColour(TextButton::textColourOffId, juce::Colours::white);
+    playlistLoadButton.setColour(TextButton::buttonColourId, c_darknavy);
+    playlistLoadButton.setColour(TextButton::textColourOffId, c_white);
     playlistLoadButton.addListener(this);
 
     //initiallize timer thread and call it every 500 milliseconds
@@ -101,15 +101,15 @@ DeckGUI::~DeckGUI()
 void DeckGUI::paint (juce::Graphics& g)
 {
     // slider area background
-    g.setColour(Colour::fromString("#000000"));
+    g.setColour(c_black);
     g.fillRect(getLocalBounds());
 
     // draw an outline to separate both decks
-    g.setColour(Colour::fromString("#2c2a4b"));
+    g.setColour(c_mediumnavy);
     g.drawRect(getLocalBounds(), 1);
 
     g.setFont(14.0f);
-    g.setColour(juce::Colours::white);
+    g.setColour(c_white);
 
     // slider labels
     g.drawText ("vol.", getLocalBounds().removeFromLeft(165).removeFromTop(220),
@@ -154,13 +154,13 @@ void DeckGUI::buttonClicked(Button* btn)
         {
             player->start();
             btn->setButtonText("STOP");
-            btn->setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
+            btn->setColour(TextButton::buttonColourId, c_lightnavy);
         }
         else {
             // if button text = STOP
             player->stop();
             btn->setButtonText("PLAY");
-            btn->setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
+            btn->setColour(TextButton::buttonColourId, c_darknavy);
         }
     }
     if (btn == &playlistLoadButton)
@@ -189,7 +189,7 @@ void DeckGUI::buttonClicked(Button* btn)
         else
         {
             btn->setButtonText("SELECT COLOUR");
-            btn->setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
+            btn->setColour(TextButton::buttonColourId, c_darknavy);
         }
 
         // update colour
@@ -208,7 +208,7 @@ void DeckGUI::buttonClicked(Button* btn)
         }
         else {
             player->setGain(0.5);
-            btn->setColour(TextButton::buttonColourId, Colour::fromString("#1a1123"));
+            btn->setColour(TextButton::buttonColourId, c_darknavy);
             is_mute = false;
         }
     }

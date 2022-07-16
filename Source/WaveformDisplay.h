@@ -44,6 +44,11 @@ public:
 
 private:
 
+    juce::Colour c_teal = juce::Colour(43, 200, 197);
+    juce::Colour c_mediumnavy = juce::Colour(44, 42, 75);
+    juce::Colour c_darkernavy = juce::Colour(29, 27, 54);
+    juce::Colour c_cream = juce::Colour(229, 229, 229);
+    
     /** fetch user selected colour */
     //juce::Colour fetchSelection();
 

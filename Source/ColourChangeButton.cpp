@@ -14,8 +14,8 @@
 //==============================================================================
 ColourChangeButton::ColourChangeButton()
     : TextButton("SELECT COLOUR"),
-    // if no colour exists in the colour file - use orange
-    currentColour(Colour::fromString("#2bc8c5"))
+    // if no colour exists in the colour file - use teal
+    currentColour(c_teal)
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.

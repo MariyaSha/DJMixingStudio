@@ -24,8 +24,8 @@ RecordingComponent::RecordingComponent()
     // RECORD BUTTON STYLING
     addAndMakeVisible(recordButton);
     recordButton.setColour(TextButton::buttonColourId, Colour(0xffff5c5c));
-    recordButton.setColour(TextButton::textColourOnId, Colours::black);
-    recordButton.setColour(ComboBox::outlineColourId, juce::Colours::white);
+    recordButton.setColour(TextButton::textColourOnId, c_black);
+    recordButton.setColour(ComboBox::outlineColourId, c_white);
 
     // RECORD BUTTON FUNCTIONALITY
     recordButton.onClick = [this]
@@ -38,15 +38,15 @@ RecordingComponent::RecordingComponent()
 
     // RECORDING NAME TEXTBOX STYLING
     addAndMakeVisible(recordingName);
-    recordingName.setColour(TextEditor::backgroundColourId, Colour::fromString("#52567d"));
-    recordingName.setColour(TextEditor::textColourId, Colour::fromString("#ffffff"));
-    recordingName.setTextToShowWhenEmpty(CharPointer_UTF8("recording name"), Colour::fromString("#ffffff"));
+    recordingName.setColour(TextEditor::backgroundColourId, c_lightnavy);
+    recordingName.setColour(TextEditor::textColourId, c_white);
+    recordingName.setTextToShowWhenEmpty(CharPointer_UTF8("recording name"), c_white);
     recordingName.addListener(this);
 
     // LOAD TO PLAYLIST BUTTON STYLING
     addAndMakeVisible(loadToPlaylistButton);
-    loadToPlaylistButton.setColour(TextButton::buttonColourId, Colour::fromString("#2c2a4b"));
-    loadToPlaylistButton.setColour(TextButton::buttonColourId, Colour::fromString("#52567d"));
+    loadToPlaylistButton.setColour(TextButton::buttonColourId, c_mediumnavy);
+    loadToPlaylistButton.setColour(TextButton::buttonColourId, c_lightnavy);
 
     // LOAD TO PLAYLIST BUTTON FUNCTIONALITY
     loadToPlaylistButton.onClick = [this]
@@ -100,13 +100,13 @@ RecordingComponent::~RecordingComponent()
 void RecordingComponent::paint (juce::Graphics& g)
 {
     // set background colour
-    g.setColour(Colour::fromString("#000000"));
+    g.setColour(c_black);
     g.fillRect(getLocalBounds());
 
     // DRAW APP LOGO
     // DJ part
     g.setFont(juce::Font("Ubuntu Condenced", 34.0f, juce::Font::bold));
-    g.setColour(Colour::fromString("#febc27"));
+    g.setColour(c_sunflower);
     g.drawText("DJ", getLocalBounds().removeFromTop(50).removeFromRight(980), Justification::left, 2);
     // Audio Mixer part
     g.setFont(juce::Font("Lobster", 30.0f, juce::Font::italic));
