@@ -8,8 +8,6 @@ It was submitted in March 2022 and slightly revised (as per July 2022) to match 
 <br>
 This app was created with strict Object Oriented Programming principles and earned me the grade of: <b>93.3</b>
 <br>
-Please feel free to use any code snippet, function or class from this project to advance your programming skills.
-<br>
 <br>
 
 ![DJ Mixing App Screenshot](https://user-images.githubusercontent.com/32107652/179364464-457ee343-7e2b-4496-b154-49ddf6778a66.png)
@@ -28,4 +26,6 @@ DJ Mixer Studio has several important features:
 - <b>Recording Component</b> which allows you to record microphone input and save it in the <b>Documents</b> directory. Also allows you to load the recording straight into the Playlist Component (from which it can be loaded to any of the decks)
 - All playlist tracks remain loaded even after the application is closed.
 
+<h2>Project Usage</h2>
+Please feel free to use any code snippet, function or class from this project to advance your programming skills.
 
