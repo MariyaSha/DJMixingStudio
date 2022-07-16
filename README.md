@@ -23,8 +23,9 @@ Please feel free to use any code snippet, function or class from this project to
 <h2>Project Highlights</h2>
 DJ Mixer Studio has several important features:
 
-- DJ Deck Component which allows you to load 2 different music tracks simulteniously(either from the playlist or directly from your computer). The DJ Deck component also allows you to play/stop/mute each track and control their speed, volume, playhead position and even waveform colour.
-- Playlist Component which allows you to load up to 7 different tracks from your computer, unload them, clear them, search then, as well as play and stop each track (before even loading it to a given deck).
-- Recording Component which allows you to record microphone input and save it in the <b>Documents</b> directory. Also allows you to load the recording straight into the Playlist Component (from which it can be loaded to any of the decks)
+- <b>DJ Deck Component</b> which allows you to load 2 different music tracks simulteniously(either from the playlist or directly from your computer). The DJ Deck component also allows you to play/stop/mute each track and control their speed, volume, playhead position and even waveform colour.
+- <b>Playlist Component</b> which allows you to load up to 7 different tracks from your computer, unload them, clear them, search then, as well as play and stop each track (before even loading it to a given deck).
+- <b>Recording Component</b> which allows you to record microphone input and save it in the <b>Documents</b> directory. Also allows you to load the recording straight into the Playlist Component (from which it can be loaded to any of the decks)
+- All playlist tracks remain loaded even after the application is closed.
 
 
