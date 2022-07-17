@@ -18,6 +18,10 @@ This app was created with strict Object Oriented Programming principles and earn
 <br>
 <b>language :</b> C++
 
+<h2>Project Demo</h2>
+Please see a quick demonstration of this app on YouTube:
+<a href="https://youtu.be/CrWS6wUP0qs" target="_blank">https://youtu.be/CrWS6wUP0qs</a>
+
 <h2>Project Highlights</h2>
 DJ Mixer Studio has several important features:
 
